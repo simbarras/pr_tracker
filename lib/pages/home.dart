@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pr_tracker/models/pr_model.dart';
+import 'package:pr_tracker/widgets/linechart_pr.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -38,7 +39,9 @@ class _HomePageState extends State<HomePage> {
               ),
               child: Column(
                 children: [
-                  Text(prs[index].name)
+                  Text(prs[index].name),
+                  // Linechart
+                  LineChartPrWidget(pr: prs[index])
                 ],
               ),
             );
